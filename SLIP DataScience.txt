@@ -1,0 +1,71 @@
+Qu. 1 Given the speed of 13 cars:speed=[99,86,87,88,111,86,103,87,94,78,77,85,86]
+Find the mean, median, mode of the given data.
+
+Solutions : 
+
+import numpy
+
+from scipy import stats
+speed = [99,86,87,88,111,86,103,87,94,78,77,85,86]
+mean_s = numpy.mean(speed)
+print(mean_s)
+median_s = numpy.median(speed)
+print(median_s)
+mode_s = stats.mode(speed, keepdims=False)
+print(mode_s)
+stdDev_s = numpy.std(speed)
+
+# Import statistics Library
+import statistics
+# Calculate the standard deviation from a sample of data
+print(statistics.stdev([1, 3, 5, 7, 9, 11]))
+print(statistics.stdev([2, 2.5, 1.25, 3.1, 1.75, 2.8]))
+print(statistics.stdev([-11, 5.5, -3.4, 7.1]))
+print(statistics.stdev([1, 30, 50, 100]))
+
+import numpy as np
+# Sample dataset
+data = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+# Calculate Interquartile Range (IQR) using numpy
+# first quartile (q1) and third quartile (q3)
+q1 = np.percentile(data, 25)
+q3 = np.percentile(data, 75)
+iqr = q3 - q1
+# Calculate Quartile Deviation
+quartile_deviation = (q3 - q1) / 2
+print("Interquartile Range (IQR):", iqr)
+print("Quartile Deviation:", quartile_deviation)
+
+import numpy
+import matplotlib.pyplot as plt
+x = numpy.random.normal(5.0, 1.0, 100000)
+plt.hist(x, 100)
+plt.show()
+
+Qu 2 Create vector, perform various operations on vector. Use built in functions on vector Indexing
+and slicing.
+
+Solutions : 
+
+import numpy as np
+
+vector = np.array([10,20,30,40,50,])
+print("Original Vector :",vector)
+
+print("Element as index 0:",vector[0])
+print("Element as index 2:",vector[2])
+
+print("Slicing Vectors 1to3",vector[1:4])
+
+vector_sum = np.sum(vector)
+vector_mean = np.mean(vector)
+vector_squared = np.square(vector)
+vector_sorted = np.sort(vector)
+
+print("Sum of Vectors elements:", vector_sum)
+print("Mean of vectors elements:",vector_mean)
+print("Squared of vectors elements",vector_squared)
+print("Sorting of Vectors Elements:",vector_sorted)
+
+reversed_vector = vector[::-1]
+print("Reversed Vector" ,reversed_vector)
